@@ -8,3 +8,6 @@ C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.csproj.Ge
 C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.csproj.CoreCompileInputs.cache
 C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.exe
 C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.pdb
+C:\Miša\github\Small-projects\Encryptor\Encryptor\bin\Debug\Newtonsoft.Json.dll
+C:\Miša\github\Small-projects\Encryptor\Encryptor\bin\Debug\Newtonsoft.Json.xml
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.csproj.CopyComplete

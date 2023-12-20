@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Encryptor
 {
@@ -29,7 +30,6 @@ namespace Encryptor
         private void btn_encrypt_Click(object sender, EventArgs e)
         {
             Key key = new Key();
-            MessageBox.Show(key.ShowKey());
             if(path == null || path == "")
             {
                 MessageBox.Show("File is not selected! Select a file");
@@ -40,18 +40,25 @@ namespace Encryptor
                 FileStream file = new FileStream(path, FileMode.Open);
                 byte[] bytes = new byte[file.Length];
                 file.Read(bytes, 0, bytes.Length);
-                MessageBox.Show(string.Join(", ", bytes));
                 var encrypted_bytes = key.Encrypt(bytes);
+                // Saving encrypted file
                 using (FileStream EncryptedFile = new FileStream(path + ".encr", FileMode.CreateNew))
                 {
-
+                    EncryptedFile.Write(encrypted_bytes, 0, encrypted_bytes.Length);
+                }
+                // Saving key
+                using (FileStream KeyStream = new FileStream(path + ".key", FileMode.CreateNew))
+                {
+                    var json = JsonConvert.SerializeObject(key);
+                    var key_bytes = Encoding.UTF8.GetBytes(json);
+                    KeyStream.Write(key_bytes, 0, key_bytes.Length);
                 }
             }
-            catch(FileNotFoundException)
+            catch (FileNotFoundException)
             {
                 MessageBox.Show($"File {path} is not found!");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show($"Unexpected error has occured: {ex.Message}");
             }
