@@ -16,5 +16,18 @@ namespace Encryptor
         {
             InitializeComponent();
         }
+
+        private void btn_get_file_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog.ShowDialog();
+            string path = OpenFileDialog.FileName;
+            lbl_path.Text = $"Path: {path}";
+        }
+
+        private void btn_encrypt_Click(object sender, EventArgs e)
+        {
+            Key key = new Key();
+            MessageBox.Show(key.ShowKey());
+        }
     }
 }

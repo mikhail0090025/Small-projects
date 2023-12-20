@@ -1,0 +1,10 @@
+C:\Miša\github\Small-projects\Encryptor\Encryptor\bin\Debug\Encryptor.exe.config
+C:\Miša\github\Small-projects\Encryptor\Encryptor\bin\Debug\Encryptor.exe
+C:\Miša\github\Small-projects\Encryptor\Encryptor\bin\Debug\Encryptor.pdb
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.csprojAssemblyReference.cache
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.Form1.resources
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.Properties.Resources.resources
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.csproj.GenerateResource.cache
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.csproj.CoreCompileInputs.cache
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.exe
+C:\Miša\github\Small-projects\Encryptor\Encryptor\obj\Debug\Encryptor.pdb
