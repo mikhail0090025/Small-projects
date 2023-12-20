@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encryptor
 {
+    [System.Serializable]
     public class Key
     {
         public Dictionary<byte, byte> ByteDictionary;
@@ -33,6 +34,15 @@ namespace Encryptor
                 result.Append($"{item.Key}: {item.Value}\n");
             }
             return result.ToString();
+        }
+        public byte[] Encrypt(byte[] list_to_encrypt)
+        {
+            var res = new byte[list_to_encrypt.Length];
+            for (int i = 0; i < res.Length; i++)
+            {
+                res[i] = ByteDictionary[list_to_encrypt[i]];
+            }
+            return res;
         }
     }
 }
